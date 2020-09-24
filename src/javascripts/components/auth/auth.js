@@ -9,7 +9,7 @@ const signMeIn = () => {
 const loginButton = () => {
   const domString = `<div id="auth">
                       <span style="font-size: 5em; color: Tomato;"><i class="fab fa-pinterest"></i></span>
-                      <h4>Welcome to Pinterest</h4>
+                      <h4>Welcome to Pinterest 2.0</h4>
                       <button id="google-auth" class="btn btn-primary btn-lg">
                         <i class="fab fa-google"></i></i>oogle Login
                       </button>
