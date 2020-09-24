@@ -7,8 +7,9 @@ import myNavbar from '../../components/myNavbar/myNavbar';
 const checkLoginStatus = () => {
   firebase.auth().onAuthStateChanged((user) => {
     if (user) {
-      const currentUser = userData.setCurrentFarmer(user);
+      const currentUser = userData.setCurrentUser(user);
       myNavbar.myNavbar(currentUser);
+      $('#app').html('');
     } else {
       auth.loginButton();
       $('#nav').html('');
