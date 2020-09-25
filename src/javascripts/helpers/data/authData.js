@@ -9,8 +9,9 @@ const checkLoginStatus = () => {
   firebase.auth().onAuthStateChanged((user) => {
     if (user) {
       const currentUser = userData.setCurrentUser(user);
+      console.warn(currentUser.uid);
       myNavbar.myNavbar(currentUser);
-      view.viewListener('boards-link');
+      view.viewListener('boards-link', currentUser.uid);
       $('#app').html('');
     } else {
       auth.loginButton();
