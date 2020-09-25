@@ -1,9 +1,12 @@
 import boardsView from './boardsView';
+import addBoard from './addBoardView';
 
 const viewHelper = (id) => {
   switch (id) {
     case 'boards-link':
       return boardsView.boardsView();
+    case 'add-board-link':
+      return addBoard.addBoardView();
     default:
       return console.warn('nothing is clicked');
   }

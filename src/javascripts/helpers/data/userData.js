@@ -23,7 +23,7 @@ const checkIfUserExistsInFirebase = (user) => {
 };
 
 const setCurrentUser = (userObj) => {
-  const farmer = {
+  const user = {
     image: userObj.photoURL,
     uid: userObj.uid,
     name: userObj.displayName,
@@ -32,9 +32,21 @@ const setCurrentUser = (userObj) => {
   };
   const loggedIn = window.sessionStorage.getItem('ua');
   if (!loggedIn) {
-    checkIfUserExistsInFirebase(farmer);
+    checkIfUserExistsInFirebase(user);
   }
-  return farmer;
+  return user;
 };
+const getAllUsers = () => new Promise((resolve, reject) => {
+  axios.get(`${baseUrl}/users.json`).then((response) => {
+    const userData = response.data;
+    const users = [];
+    if (userData) {
+      Object.keys(userData).forEach((item) => {
+        users.push(userData[item]);
+      });
+    }
+    resolve(users);
+  }).catch((error) => reject(error));
+});
 
-export default { checkIfUserExistsInFirebase, setCurrentUser };
+export default { checkIfUserExistsInFirebase, setCurrentUser, getAllUsers };
