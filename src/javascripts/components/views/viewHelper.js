@@ -1,17 +1,20 @@
 import boardsView from './boardsView';
+import addBoard from './addBoardView';
 
-const viewHelper = (id, uid) => {
+const viewHelper = (id) => {
   switch (id) {
     case 'boards-link':
-      return boardsView.boardsView(uid);
+      return boardsView.boardsView();
+    case 'add-board-link':
+      return addBoard.addBoardView();
     default:
       return console.warn('nothing is clicked');
   }
 };
-const viewListener = (view, uid) => {
+const viewListener = (view) => {
   viewHelper(view);
   $('body').on('click', 'li.nav-item', (e) => {
-    viewHelper(e.currentTarget.id, uid);
+    viewHelper(e.currentTarget.id);
   });
 };
 
