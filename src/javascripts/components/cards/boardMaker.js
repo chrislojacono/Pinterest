@@ -1,4 +1,3 @@
-import pins from '../../helpers/data/pinData';
 import pinsView from '../views/pinsView';
 
 const boardMaker = (board) => {
@@ -9,18 +8,7 @@ const boardMaker = (board) => {
     </div>
   </div>`;
 
-  $('body').on('click', '.see-pins', (e) => {
-    e.stopImmediatePropagation();
-    $('#app').html('');
-    pins.getPinsOfBoards(e.currentTarget.id).then((response) => {
-      const newObject = response;
-      const newArray = [];
-      Object.keys(newObject).forEach((item) => {
-        newArray.push(newObject[item]);
-      });
-      $('#app').append(pinsView.pinMaker(newArray[0]));
-    });
-  });
+  pinsView.showPins();
   return domString;
 };
 
