@@ -49,7 +49,7 @@ const updateBoardForm = (boardObject) => {
         .updateBoard(boardObject.uid, data)
         .then(() => {
           $('#success-message').html(
-            '<div class="alert alert-success" role="alert">Your Board Was Added!</div>'
+            '<div class="alert alert-success" role="alert">Your Board Was Updated!</div>'
           );
         })
         .catch((error) => console.warn(error));

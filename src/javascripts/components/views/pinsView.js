@@ -6,6 +6,7 @@ const pinMaker = (object) => {
     <a  href="${object.url}"><div class="img-container card-body" style="background-image: url(${object.image})">
     </div></a>
     <h3 class="card-title" style="color: black">${object.name}</h3>
+    <button id="${object.uid}" class="btn btn-outline-warning update-pin-btn">Update Pin</button>
     <button id="${object.uid}" class="btn btn-danger delete-pin"><i id="pin-icon" class="far fa-trash-alt"></i>Delete Pin</button>
     </div>`;
   $('body').on('click', '.delete-pin', (e) => {
