@@ -36,7 +36,7 @@ const updateBoardForm = (boardObject) => {
     const data = {
       name: $('#name').val() || false,
       image: $('#image').val() || false,
-      userUid: $('#user').val() || false,
+      useruid: $('#user').val() || false,
     };
 
     if (Object.values(data).includes(false)) {
