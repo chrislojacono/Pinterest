@@ -6,7 +6,14 @@ const pinMaker = (object) => {
     </div>
     <h3 class="card-title" style="color: black">${object.name}</h3>
     <a href="${object.url}" id="${object.uid}" class="btn btn-info see-pins">Visit Site</a>
+    <button id="${object.uid}" class="btn btn-danger delete-pin">Delete Pin</button>
     </div>`;
+  $('body').on('click', '.delete-pin', (e) => {
+    e.stopImmediatePropagation();
+    const firebaseKey = e.currentTarget.id;
+    $(`.card#${firebaseKey}`).remove();
+    pins.deletePin(firebaseKey);
+  });
   return domString;
 };
 

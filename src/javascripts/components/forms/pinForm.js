@@ -24,7 +24,7 @@ const addPinForm = () => {
             <option value="">Select a Board</option>
           </select>
       </div>
-      <button id="add-board-btn" type="submit" class="btn btn-info"><i class="fas fa-plus-circle"></i> Add Board</button>
+      <button id="add-board-btn" type="submit" class="btn btn-info"><i class="fas fa-plus-circle"></i> Add Pin</button>
     </form>`);
 
   boardData.getBoards().then((response) => {
