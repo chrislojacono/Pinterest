@@ -9,7 +9,7 @@ const boardsView = () => {
         $('#app').append(board.boardMaker(item));
       });
     } else {
-      $('#app').append('<h2>NO FARMERS</h2>');
+      $('#app').append('<h2>NO BOARDS</h2>');
     }
   });
 };

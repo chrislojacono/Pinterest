@@ -16,4 +16,17 @@ const getPinsOfBoards = (boardUid) => new Promise((resolve, reject) => {
   }).catch((error) => reject(error));
 });
 
-export default { getPinsOfBoards };
+const addPin = (data) => axios.post(`${baseUrl}/Pins.json`, data).then((response) => {
+  const update = { uid: response.data.name };
+  axios
+    .patch(`${baseUrl}/Pins/${response.data.name}.json`, update)
+    .catch((error) => console.warn(error));
+});
+
+const deletePin = (pinUid) => axios.delete(`${baseUrl}/Pins/${pinUid}.json`);
+
+export default {
+  getPinsOfBoards,
+  addPin,
+  deletePin
+};
