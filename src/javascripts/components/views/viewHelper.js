@@ -11,7 +11,7 @@ const viewHelper = (id, user, argument) => {
     case 'add-board-link':
       return addBoard.addBoardView();
     case 'add-pin-link':
-      return addPin.addPinView();
+      return addPin.addPinView(user);
     case 'update-board-link':
       return updateBoard.updateBoardView(argument);
     case 'update-pin-link':
