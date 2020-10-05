@@ -8,6 +8,7 @@ const boardMaker = (board) => {
     </div>
     <div class="board-button">
     <a href="#" id="${board.uid}" class="btn btn-info see-pins board-buttons"><i id="pin-icon" class="fas fa-map-pin"></i> Pins</a>
+    <button class="btn btn-warning update-board board-buttons" id="${board.uid}">Update Board</button>
     <button id="${board.uid}" class="btn btn-danger delete-board board-buttons"><i id="pin-icon" class="far fa-trash-alt"></i> Delete Board </button>
     </div>
   </div>`;
