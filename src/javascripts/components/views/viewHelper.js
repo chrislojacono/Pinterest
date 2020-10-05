@@ -4,10 +4,10 @@ import addPin from './addPinView';
 import updateBoard from './updateBoardView';
 import updatePin from './updatePinView';
 
-const viewHelper = (id, argument) => {
+const viewHelper = (id, argument, user) => {
   switch (id) {
     case 'boards-link':
-      return boardsView.boardsView();
+      return boardsView.boardsView(user);
     case 'add-board-link':
       return addBoard.addBoardView();
     case 'add-pin-link':
@@ -20,10 +20,10 @@ const viewHelper = (id, argument) => {
       return console.warn('nothing is clicked');
   }
 };
-const viewListener = (view) => {
+const viewListener = (view, user) => {
   viewHelper(view);
   $('body').on('click', 'li.nav-item', (e) => {
-    viewHelper(e.currentTarget.id);
+    viewHelper(e.currentTarget.id, user);
   });
   $('body').on('click', '.update-board', (e) => {
     const boardUid = e.currentTarget.id;
