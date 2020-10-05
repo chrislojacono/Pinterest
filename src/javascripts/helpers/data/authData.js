@@ -8,9 +8,10 @@ import view from '../../components/views/viewHelper';
 const checkLoginStatus = () => {
   firebase.auth().onAuthStateChanged((user) => {
     if (user) {
+      console.warn(user.uid);
       const currentUser = userData.setCurrentUser(user);
       myNavbar.myNavbar(currentUser);
-      view.viewListener('boards-link');
+      view.viewListener('boards-link', user.uid);
       $('#app').html('');
     } else {
       auth.loginButton();
