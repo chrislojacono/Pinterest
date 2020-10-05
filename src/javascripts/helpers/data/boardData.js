@@ -40,7 +40,8 @@ const deleteBoard = (boardUid) => {
     });
   }).then(() => {
     getSingleBoard(boardUid).then((response) => {
-      axios.delete(`${baseUrl}/Boards/${response.data.uid}.json`);
+      console.warn(response.uid);
+      axios.delete(`${baseUrl}/Boards/${response.uid}.json`);
     });
   });
 };
