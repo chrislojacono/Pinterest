@@ -1,8 +1,8 @@
 import form from '../forms/pinForm';
 
-const addPinView = () => {
+const addPinView = (user) => {
   $('#app').html('<div id="pin-form"></div>');
-  form.addPinForm();
+  form.addPinForm(user);
 };
 
 export default { addPinView };

@@ -2,6 +2,7 @@ import boardData from '../../helpers/data/boardData';
 import board from '../cards/boardMaker';
 
 const boardsView = (user) => {
+  console.warn(user);
   $('#app').html('');
   boardData.getBoards(user).then((response) => {
     if (response.length) {

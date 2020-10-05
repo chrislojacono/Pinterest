@@ -5,19 +5,17 @@ import pins from './pinData';
 const baseUrl = apiKeys.firebaseKeys.databaseURL;
 
 const getBoards = (userId) => new Promise((resolve, reject) => {
+  console.warn(userId);
   axios
-    .get(`${baseUrl}/Boards.json`)
+    .get(`${baseUrl}/Boards.json?orderBy="useruid"&equalTo="${userId}"`)
     .then((response) => {
       const boards = response.data;
+
       const boardsArray = [];
       if (boards) {
         Object.keys(boards).forEach((boardId) => {
           boardsArray.push(boards[boardId]);
-          boardsArray.forEach((item) => {
-            if (item.useruid === userId) {
-              resolve(boardsArray);
-            }
-          });
+          resolve(boardsArray);
         });
       }
     })

@@ -1,7 +1,7 @@
 import boardData from '../../helpers/data/boardData';
 import pinData from '../../helpers/data/pinData';
 
-const addPinForm = () => {
+const addPinForm = (user) => {
   $('#pin-form').html(`<h2>Add A Pin</h2>
     <div id="success-message"></div>
     <form>
@@ -27,7 +27,7 @@ const addPinForm = () => {
       <button id="add-board-btn" type="submit" class="btn btn-info"><i class="fas fa-plus-circle"></i> Add Pin</button>
     </form>`);
 
-  boardData.getBoards().then((response) => {
+  boardData.getBoards(user).then((response) => {
     response.forEach((item) => {
       $('select').append(`<option value="${item.uid}">${item.name}</option>`);
     });
