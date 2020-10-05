@@ -46,4 +46,12 @@ const deleteBoard = (boardUid) => {
   });
 };
 
-export default { getBoards, addBoard, deleteBoard };
+const updateBoard = (uid, dataObject) => axios.patch(`${baseUrl}/Boards/${uid}.json`, dataObject);
+
+export default {
+  getBoards,
+  addBoard,
+  deleteBoard,
+  updateBoard,
+  getSingleBoard
+};
