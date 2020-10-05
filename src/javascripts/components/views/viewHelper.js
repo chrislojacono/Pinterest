@@ -11,11 +11,11 @@ const viewHelper = (id, user, argument) => {
     case 'add-board-link':
       return addBoard.addBoardView();
     case 'add-pin-link':
-      return addPin.addPinView(user);
+      return addPin.addPinView();
     case 'update-board-link':
       return updateBoard.updateBoardView(argument);
     case 'update-pin-link':
-      return updatePin.updatePinView(user, argument);
+      return updatePin.updatePinView(argument, user);
     default:
       return console.warn('nothing is clicked');
   }
@@ -28,7 +28,7 @@ const viewListener = (view, user) => {
   });
   $('body').on('click', '.update-board', (e) => {
     const boardUid = e.currentTarget.id;
-    viewHelper('update-board-link', boardUid);
+    viewHelper('update-board-link', user, boardUid);
   });
   $('body').on('click', '.update-pin-btn', (e) => {
     const pinUid = e.currentTarget.id;
