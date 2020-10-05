@@ -1,7 +1,8 @@
 import pinData from '../../helpers/data/pinData';
 import boardData from '../../helpers/data/boardData';
 
-const updatePinForm = (pinObject) => {
+const updatePinForm = (pinObject, userId) => {
+  console.warn(userId);
   $('#update-pin-form').html(`<h2>Update A Pin</h2>
     <div id="success-message"></div>
     <form>
@@ -27,7 +28,7 @@ const updatePinForm = (pinObject) => {
       <button id="update-Pin-btn" type="submit" class="btn btn-info"><i class="fas fa-plus-circle"></i> Update Pin</button>
     </form>`);
 
-  boardData.getBoards().then((response) => {
+  boardData.getBoards(userId).then((response) => {
     response.forEach((item) => {
       $('select').append(`<option value="${item.uid}" ${
         pinObject.boardUid === item.uid ? "selected ='selected'" : ''
