@@ -14,9 +14,9 @@ const getBoards = (userId) => new Promise((resolve, reject) => {
       if (boards) {
         Object.keys(boards).forEach((boardId) => {
           boardsArray.push(boards[boardId]);
-          resolve(boardsArray);
         });
       }
+      resolve(boardsArray);
     })
     .catch((error) => reject(error));
 });
