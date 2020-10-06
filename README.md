@@ -11,8 +11,8 @@ The goal was to use firebase effecively with OAuth and its realtime database. We
 Eslint with Air bnb Javascript style guide
 
 ## Screenshots
+![Screen Shot 2020-10-05 at 8 50 08 PM](https://user-images.githubusercontent.com/66916708/95150575-1371ca00-074e-11eb-93d8-7fd1896e23e4.png)
 
-![Screen Shot 2020-10-05 at 1 36 03 PM](https://user-images.githubusercontent.com/66916708/95119096-097da600-0711-11eb-880e-f77857893d0f.png)
 ![Screen Shot 2020-10-05 at 1 34 21 PM](https://user-images.githubusercontent.com/66916708/95119099-0be00000-0711-11eb-9cd5-8d37690b775a.png)
 
 ## Tech/Framework
@@ -46,3 +46,6 @@ const addPin = (data) => axios.post(`${baseUrl}/Pins.json`, data).then((response
 
 ## ERD 
 ![Screen Shot 2020-10-05 at 1 48 26 PM](https://user-images.githubusercontent.com/66916708/95119371-798c2c00-0711-11eb-81c0-f6266777221f.png)
+
+## Deployed Site
+https://pinterest2.netlify.app/#
