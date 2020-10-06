@@ -1,37 +1,86 @@
 .img-container {
     height: 300px;
+    width: auto;
     background-size: cover;
     background-position: center;
   }
-
 #app {
     display: flex;
     justify-content: space-around;
     flex-flow: row wrap;
     padding: 50px;
+    justify-content: center;
+    align-items: center;
 }
 .card {
-    width: 30%;
     position: relative;
+    margin-top: 20px;
+    width: 30%;
+    margin: 10px;
+}
+@media screen and (max-width: 400px){
+    .card{
+        width: 100%
+    }
 }
 .board-button{
-    // position: absolute;
-    // bottom: 10px;
-    // left: 0px;
+    height: auto;
     margin: 0 auto;
     width: 100%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
 }
 .card-title {
     color: white;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background-image: radial-gradient(rgba(144, 171, 209, 0.432), rgba(92, 14, 70, 0.418) );
+    text-shadow: 2px 2px black;
+    letter-spacing: 2px;
+    white-space: nowrap;
 }
 .card-body {
-    background-image: linear-gradient(to top, rgba(209, 209, 219, 0.253), rgba(204, 174, 195, 0.73));
+    background-image: linear-gradient(to top, rgba(67, 67, 216, 0.075), rgba(118, 24, 141, 0.315));
 }
 #pin-icon{
     margin-right: 10px;
 }
-// .delete-board{
-//     // width: 30%;
-// }
+.board-buttons{
+    width:33.3%;
+}
+.grow { 
+    transition: all .2s ease-in-out; 
+}
+    
+.grow:hover { 
+  transform: scale(1.1); 
+}
+
+.pin-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+a, a:hover, a:focus, a:active {
+    text-decoration: none;
+    color: inherit;
+}
+.no-boards{
+    width: 70%;
+    background-color: whitesmoke;
+    color: rgb(75, 62, 62);
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+}
+.delete-board{
+    background-color: rgb(179, 44, 118);
+}
+#auth{
+    background-color: rgb(240, 240, 233);
+    padding: 10px;
+    border-radius: 10px;
+}

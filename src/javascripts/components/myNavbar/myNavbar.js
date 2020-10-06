@@ -31,9 +31,15 @@ const myNavbar = (currentUser) => {
     </li>
     </ul>
     <ul class="navbar-nav ml-auto">
+        <div class="user-info">
           <li class="user-info-nav">
             Welcome, ${currentUser.name}!
           </li>
+          <li class="user-info-nav">
+          <img class="current-img" src="${currentUser.image}" alt="profile-pic">
+          
+           </li>
+          </div>
           <li class="nav-item">
             <button class="nav-link btn btn-danger p-2" id="navbar-logout-button">Logout</button>
           </li>

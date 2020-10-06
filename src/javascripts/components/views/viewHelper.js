@@ -21,7 +21,6 @@ const viewHelper = (id, user, argument) => {
   }
 };
 const viewListener = (view, user) => {
-  console.warn(user);
   viewHelper(view, user);
   $('body').on('click', 'li.nav-item', (e) => {
     viewHelper(e.currentTarget.id, user);
