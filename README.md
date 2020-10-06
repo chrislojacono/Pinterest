@@ -18,7 +18,7 @@ Eslint with Air bnb Javascript style guide
 ## Tech/Framework
 Javascript Es6/Nodejs/Jquery
 
-## Feateures
+## Features
 Full CRUD capabilities, User Autherization with Firebase
 
 ## Code Snippet
