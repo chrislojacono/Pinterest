@@ -9,7 +9,7 @@ const boardsView = (user) => {
     if (response.length) {
       response.forEach((item) => {
         $('#app').append(board.boardMaker(item));
-        $('.no-boards').html('');
+        $('.alert').hide();
       });
     } else {
       $('.alert').html('<h1 class="no-boards">No Boards Yet! Head to the Navbar to add Boards, then add Pins to them of things you love!</h1>');
