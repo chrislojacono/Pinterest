@@ -13,7 +13,7 @@ const updatePinForm = (pinObject, userId) => {
       </div>
       <div class="form-group">
         <label for="image">Image</label>
-        <input type="text" class="form-control" id="image" value="${pinObject.image}" placeholder="Url address">
+        <input type="text" class="form-control" id="image" value="${pinObject.image}" placeholder="Copy Image Address Here">
       </div>
       <div class="form-group">
       <label for="URL">Website Address</label>

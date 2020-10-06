@@ -7,6 +7,7 @@ const signMeIn = () => {
 };
 
 const loginButton = () => {
+  $('.alert').hide();
   const domString = `<div id="auth">
                       <span style="font-size: 5em; color: Tomato;"><i class="fab fa-pinterest"></i></span>
                       <h4>Welcome to Pinterest 2.0</h4>

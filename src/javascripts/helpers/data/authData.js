@@ -11,7 +11,6 @@ const checkLoginStatus = () => {
       const currentUser = userData.setCurrentUser(user);
       myNavbar.myNavbar(currentUser);
       view.viewListener('boards-link', user.uid);
-      console.warn(user.uid);
       $('#app').html('');
     } else {
       auth.loginButton();

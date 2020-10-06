@@ -6,4 +6,17 @@
   
   #navbar-logout-button {
     color: white;
+    margin-top: 10px;
+  }
+  .current-img{
+    height: 50px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    }
+  .user-info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
   }

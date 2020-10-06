@@ -2,7 +2,7 @@ import userData from '../../helpers/data/userData';
 import boardData from '../../helpers/data/boardData';
 
 const updateBoardForm = (boardObject) => {
-  $('#update-board-form').html(`<h2>Update A Board</h2>
+  $('#update-board-form').html(`<h2>Update Current Board</h2>
     <div id="success-message"></div>
     <form>
       <div id="error-message"></div>
@@ -12,7 +12,7 @@ const updateBoardForm = (boardObject) => {
       </div>
       <div class="form-group">
         <label for="image">Image</label>
-        <input type="text" class="form-control" id="image" value="${boardObject.image}" placeholder="Url address">
+        <input type="text" class="form-control" id="image" value="${boardObject.image}" placeholder="Copy Image Address Here">
       </div>
       <div class="form-group">
         <label for="farmer">User</label>

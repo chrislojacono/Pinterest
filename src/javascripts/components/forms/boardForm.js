@@ -12,7 +12,7 @@ const addBoardForm = () => {
       </div>
       <div class="form-group">
         <label for="image">Image</label>
-        <input type="text" class="form-control" id="image" placeholder="Url address">
+        <input type="text" class="form-control" id="image" placeholder="Copy Image Address Here">
       </div>
       <div class="form-group">
         <label for="farmer">User</label>

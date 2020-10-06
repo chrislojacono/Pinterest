@@ -5,7 +5,6 @@ import pins from './pinData';
 const baseUrl = apiKeys.firebaseKeys.databaseURL;
 
 const getBoards = (userId) => new Promise((resolve, reject) => {
-  console.warn(userId);
   axios
     .get(`${baseUrl}/Boards.json?orderBy="useruid"&equalTo="${userId}"`)
     .then((response) => {
