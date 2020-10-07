@@ -48,4 +48,4 @@ const addPin = (data) => axios.post(`${baseUrl}/Pins.json`, data).then((response
 ![Screen Shot 2020-10-05 at 1 48 26 PM](https://user-images.githubusercontent.com/66916708/95119371-798c2c00-0711-11eb-81c0-f6266777221f.png)
 
 ## Deployed Site
-https://pinterest2.netlify.app/#
+https://pinterest-5eb3d.web.app/
