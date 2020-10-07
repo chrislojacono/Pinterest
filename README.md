@@ -5,7 +5,10 @@ This project was to build a site just like Pinterest. The user should be able to
 The goal was to use firebase effecively with OAuth and its realtime database. We wanted to be able to use full CRUD capabilities with using all API calls and storing no data locally.
 
 ## Build Status
-[![Netlify Status](https://api.netlify.com/api/v1/badges/adc4fd74-3e40-4fac-9964-d49ef94cd572/deploy-status)](https://app.netlify.com/sites/pinterest2/deploys)
+Deployed!
+
+## Deployed Site
+https://pinterest-5eb3d.web.app/
 
 ## Code Style
 Eslint with Air bnb Javascript style guide
@@ -47,5 +50,4 @@ const addPin = (data) => axios.post(`${baseUrl}/Pins.json`, data).then((response
 ## ERD 
 ![Screen Shot 2020-10-05 at 1 48 26 PM](https://user-images.githubusercontent.com/66916708/95119371-798c2c00-0711-11eb-81c0-f6266777221f.png)
 
-## Deployed Site
-https://pinterest-5eb3d.web.app/
+
